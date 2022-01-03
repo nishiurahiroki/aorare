@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
-import useSWR from 'swr'
+import useSWR, {SWRResponse} from 'swr'
+
 
 
 const geoLocateFetcher = () => {
@@ -15,14 +16,14 @@ const geoLocateFetcher = () => {
 }
 
 export default function Index() {
-  const { data, error } = useSWR('geolocation', geoLocateFetcher)
+  const { data, error } : SWRResponse = useSWR('geolocation', geoLocateFetcher)
 
   if(!data) return 'Loading!'
   if(error) return 'Error'
 
-  const [ local ] = data.result.local
-  const { mname } = data.result.municipality
-  const { pname } = data.result.prefecture
+  const [ local ] = data?.result?.local
+  const { mname } = data?.result?.municipality
+  const { pname } = data?.result?.prefecture
 
   return (
     <div>
