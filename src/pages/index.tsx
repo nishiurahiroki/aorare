@@ -34,7 +34,7 @@ export default function Index() {
       </Head>
 
       <div>
-        <div>ここは</div>
+        <div>ここは test</div>
         <div>
           <span>{pname}</span>
           <span>{mname}</span>
