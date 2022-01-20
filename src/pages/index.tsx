@@ -35,11 +35,11 @@ export default function Index() {
 
       <div className="md:container md:mx-auto">
         <div className="text-2xl text-black-500 text-center font-semibold">ここは</div>
-        <div>
-          <span className="text-4xl text-red-500 text-center font-semibold">{pname}</span>
-          <span className="text-4xl text-red-500 text-center font-semibold">{mname}</span>
-          <span className="text-4xl text-red-500 text-center font-semibold">{local.section}</span>
-          <span className="text-4xl text-red-500 text-center font-semibold">{local.homenumber}</span>
+        <div className='text-4xl text-red-500 text-center font-semibold'>
+          <span>{pname}</span>
+          <span>{mname}</span>
+          <span>{local.section}</span>
+          <span>{local.homenumber}</span>
         </div>
         <div className="text-2xl text-black-500 text-center font-semibold">です</div>
       </div>
