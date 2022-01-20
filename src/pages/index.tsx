@@ -33,15 +33,15 @@ export default function Index() {
         <title>煽られた時に見るページ</title>
       </Head>
 
-      <div>
-        <div>ここは</div>
+      <div className="md:container md:mx-auto">
+        <div className="text-2xl text-black-500 text-center font-semibold">ここは</div>
         <div>
-          <span>{pname}</span>
-          <span>{mname}</span>
-          <span>{local.section}</span>
-          <span>{local.homenumber}</span>
+          <span className="text-4xl text-red-500 text-center font-semibold">{pname}</span>
+          <span className="text-4xl text-red-500 text-center font-semibold">{mname}</span>
+          <span className="text-4xl text-red-500 text-center font-semibold">{local.section}</span>
+          <span className="text-4xl text-red-500 text-center font-semibold">{local.homenumber}</span>
         </div>
-        <div>です</div>
+        <div className="text-2xl text-black-500 text-center font-semibold">です</div>
       </div>
      </div>
   )
