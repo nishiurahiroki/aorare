@@ -42,6 +42,14 @@ export default function Index() {
           <span>{local.homenumber}</span>
         </div>
         <div className="text-2xl text-black-500 text-center font-semibold">です</div>
+
+        <br/>
+
+        <div className='text-center'>
+          <a className="bg-red-500 text-2xl hover:bg-red-700 text-white font-bold py-4 px-8 rounded" href="tel:110">
+            110番する
+          </a>
+        </div>
       </div>
      </div>
   )
