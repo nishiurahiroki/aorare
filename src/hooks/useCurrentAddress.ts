@@ -22,9 +22,7 @@ const useCurrentAddress = () => {
     pname,
     mname,
     section : local.section,
-    homenumber : local.homenumber,
-    isLoading : false,
-    error : null
+    homenumber : local.homenumber
   }
 }
 export default useCurrentAddress
