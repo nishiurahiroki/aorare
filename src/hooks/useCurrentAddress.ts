@@ -12,10 +12,7 @@ const geoLocateFetcher = () => {
 }
 
 const useCurrentAddress = () => {
-  const { data, error } : SWRResponse = useSWR('geolocation', geoLocateFetcher)
-
-  if(!data) return { isLoading : true }
-  if(error) return { error }
+  const { data } : SWRResponse = useSWR('geolocation', geoLocateFetcher, { suspense : true })
 
   const [ local ] = data?.result?.local
   const { mname } = data?.result?.municipality

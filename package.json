@@ -10,14 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^12.0.7",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "@types/react": "^17.0.38",
+    "next": "^12.0.8",
+    "react": "^18.0.0-rc.0",
+    "react-dom": "^18.0.0-rc.0",
     "swr": "^1.1.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.6",
-    "@types/react": "^17.0.38",
     "autoprefixer": "^10.4.1",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.8",

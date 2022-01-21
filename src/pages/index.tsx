@@ -1,20 +1,25 @@
+import { Suspense } from 'react'
+
 import Head from 'next/head'
 
 import useCurrentAddress from '../hooks/useCurrentAddress'
 
 
 export default function Index() {
+  return (
+    <Suspense fallback={<>Loading..</>}>
+      <App />
+    </Suspense>
+  )
+}
+
+function App() {
   const {
     pname,
     mname,
     section,
-    homenumber,
-    isLoading : isLoadingAddress,
-    error : errorLoadingAddress
+    homenumber
   } = useCurrentAddress()
-
-  if(isLoadingAddress) return 'Loading address'
-  if(errorLoadingAddress) return 'Error loading address'
 
   return (
     <div>
