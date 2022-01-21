@@ -18,8 +18,21 @@ function App() {
     pname,
     mname,
     section,
-    homenumber
+    homenumber,
+    reload
   } = useCurrentAddress()
+
+
+  const onClickTelButton = e => {
+    const ok = window.confirm('!【注意】110番を発信します! 本当によろしいですか?')
+    if(ok === false) {
+      e.preventDefault()
+    }
+  }
+
+  const onClickReloadButton = () => {
+    reload()
+  }
 
   return (
     <div>
@@ -40,10 +53,23 @@ function App() {
         <div className="text-2xl text-black-500 text-center font-semibold">です</div>
 
         <br/>
+        <br/>
 
         <div className='text-center'>
-          <a className="bg-red-500 text-2xl hover:bg-red-700 text-white font-bold py-4 px-8 rounded" href="tel:110">
-            110番する
+          <button onClick={onClickReloadButton} className="bg-blue-500 text-2xl hover:bg-blue-700 text-white font-bold py-4 px-8 rounded">
+          🔄現在地を再読み込み
+          </button>
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+
+        <div className='text-center'>
+          <a onClick={onClickTelButton} className="bg-red-500 text-2xl hover:bg-red-700 text-white font-bold py-4 px-8 rounded" href="tel:110">
+            ⚠110番する
           </a>
         </div>
       </div>

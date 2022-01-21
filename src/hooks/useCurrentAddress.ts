@@ -1,4 +1,7 @@
-import useSWR, {SWRResponse} from 'swr'
+import useSWR, { SWRResponse } from 'swr'
+
+
+const FETCH_CURRENT_ADDRESS : string = 'geolocation'
 
 const geoLocateFetcher = () => {
   return new Promise((resolve, reject) => {
@@ -12,7 +15,11 @@ const geoLocateFetcher = () => {
 }
 
 const useCurrentAddress = () => {
-  const { data } : SWRResponse = useSWR('geolocation', geoLocateFetcher, { suspense : true })
+  const { data, mutate } : SWRResponse = useSWR(FETCH_CURRENT_ADDRESS, geoLocateFetcher, { 
+    suspense : true
+  })
+
+  const reload : () => Promise<any> = () => mutate()
 
   const [ local ] = data?.result?.local
   const { mname } = data?.result?.municipality
@@ -22,7 +29,8 @@ const useCurrentAddress = () => {
     pname,
     mname,
     section : local.section,
-    homenumber : local.homenumber
+    homenumber : local.homenumber,
+    reload
   }
 }
 export default useCurrentAddress
