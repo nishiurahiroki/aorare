@@ -37,8 +37,6 @@ function App() {
   return (
     <div>
       <Head>
-        <meta charSet='utf-8' />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"/>
         <title>煽られた時に見るページ</title>
       </Head>
 
