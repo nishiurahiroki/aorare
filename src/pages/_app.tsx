@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
+        <meta name="theme-color" content="#f9a8d4" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
         <title>煽られた時に見るページ</title>
